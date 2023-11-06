@@ -6,12 +6,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $operation = $_POST['operation'];
     
     if($operation == 'add'){
-        $numOne + $numTwo;
+        $result = $numOne + $numTwo;
+        $_SESSION['add'] = $result;
     }elseif($operation == 'subtract'){
-        $numOne - $numTwo;
+        $result = $numOne - $numTwo;
+        $_SESSION['subtract'] = $result;
     }elseif($operation == 'multiply'){
-        $numOne * $numTwo;
+        $result = $numOne * $numTwo;
+        $_SESSION['multiply'] = $result;
     }elseif($operation == 'divide'){
-        
+        if($numTwo == 0){
+            echo "Devidation by ZERO (0) not allowed!";
+        }else{
+            $result = $numOne / $numTwo;
+            $_SESSION["divide"] = $result;
+        }
+    }else{
+        echo "Invalid Operation!";
     }
 }
+session_destroy();

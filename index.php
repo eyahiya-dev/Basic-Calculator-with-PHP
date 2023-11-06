@@ -15,15 +15,15 @@
                 <input type="text" name="numberOne" class="bg-gray-50 border w-full p-2.5 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Numbers" required>
             </div>
             <div>
-              <select name="operation" class="bg-gray-50 border w-full p-2.5 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
-                <option value="add">Addition (+)</option>
-                <option value="subtract">Subtraction (-)</option>
-                <option value="multiply">Multiplication (*)</option>
-                <option value="divide">Division (/)</option>
+              <select name="operation" class="text-center bg-gray-50 border w-full p-2.5 border-gray-300 text-gray-900 text-m rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                <option value="add">Addition ( + )</option>
+                <option value="subtract">Subtraction ( - )</option>
+                <option value="multiply">Multiplication ( * )</option>
+                <option value="divide">Division ( / )</option>
               </select>
             </div>
             <div>                
-                <input type="text" name="numberTwo" placeholder="Enter Numbers" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                <input type="text" name="numberTwo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Numbers" required>
             </div>            
             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Calculate</button>            
         </form>

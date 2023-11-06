@@ -5,24 +5,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $numTwo = $_POST['numberTwo'];
     $operation = $_POST['operation'];
     
-    if($operation == 'add'){
-        $result = $numOne + $numTwo;
-        $_SESSION['add'] = $result;
-    }elseif($operation == 'subtract'){
-        $result = $numOne - $numTwo;
-        $_SESSION['subtract'] = $result;
-    }elseif($operation == 'multiply'){
-        $result = $numOne * $numTwo;
-        $_SESSION['multiply'] = $result;
-    }elseif($operation == 'divide'){
+    if($operation == '+'){
+        $result = $numOne + $numTwo;          
+    }elseif($operation == '-'){
+        $result = $numOne - $numTwo;          
+    }elseif($operation == '*'){
+        $result = $numOne * $numTwo;          
+    }elseif($operation == '/'){
         if($numTwo == 0){
-            echo "Devidation by ZERO (0) not allowed!";
+            $result = "Devidation by ZERO (0) not allowed!";
         }else{
-            $result = $numOne / $numTwo;
-            $_SESSION["divide"] = $result;
+            $result = $numOne / $numTwo;                  
         }
     }else{
-        echo "Invalid Operation!";
+        $result = "Invalid Operation!";
+        header("location: index.php");
     }
 }
-session_destroy();
+
+$_SESSION['numOne'] = $_POST['numberOne'];
+$_SESSION['numTwo'] = $_POST['numberTwo'];
+$_SESSION['operation'] = $_POST['operation'];
+$_SESSION['result'] = "Your Calculation is : {$result}";
+header("location:index.php");

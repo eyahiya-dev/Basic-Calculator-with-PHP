@@ -27,4 +27,6 @@ $_SESSION['numOne'] = $_POST['numberOne'];
 $_SESSION['numTwo'] = $_POST['numberTwo'];
 $_SESSION['operation'] = $_POST['operation'];
 $_SESSION['result'] = "Your Calculation is : {$result}";
+
+//redirect to index file
 header("location:index.php");
